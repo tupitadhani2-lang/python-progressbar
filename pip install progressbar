@@ -1,4 +1,11 @@
-# Python Progress Bar
+import time
+from progressbar import ProgressBar, Percentage, Bar
+
+pbar = ProgressBar(widgets=[Percentage(), Bar()], maxval=10).start()
+for i in range(10):
+    time.sleep(0.1)
+    pbar.update(i + 1)
+pbar.finish()# Python Progress Bar
 
 A simple, customizable text-based progress bar library for Python.
 
